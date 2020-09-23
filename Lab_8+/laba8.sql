@@ -1,0 +1,60 @@
+alter database open;
+
+--DROP TABLESPACE FOR_LOB_LAB;
+
+CREATE TABLESPACE FOR_LOB_LAB
+  DATAFILE 'FOR_LOB_LAB.dbf'
+  SIZE 30M
+  AUTOEXTEND ON NEXT 10M
+  MAXSIZE 200M
+  EXTENT MANAGEMENT LOCAL;
+
+CREATE USER lob_lab_user IDENTIFIED BY 123456789
+  DEFAULT TABLESPACE FOR_LOB_LAB
+  ACCOUNT UNLOCK;
+  
+GRANT CREATE SESSION,
+      CREATE TABLE,
+      CREATE VIEW,
+      CREATE PROCEDURE TO lob_lab_user;
+      
+GRANT CREATE ANY DIRECTORY,
+      DROP ANY DIRECTORY TO lob_lab_user;
+      
+ALTER USER lob_lab_user QUOTA 100M ON FOR_LOB_LAB;
+
+-- lob_lab_user
+--DROP DIRECTORY BFILE_DIR;
+CREATE DIRECTORY BFILE_DIR as 'C:\MyBlobs';
+GRANT READ ON DIRECTORY BFILE_DIR TO lob_lab_user
+--DROP TABLE lob_table;
+CREATE TABLE lob_table (
+  id   NUMBER(5)  PRIMARY KEY,
+  JPG BLOB NOT NULL
+)
+
+SELECT * FROM lob_table;
+
+DECLARE
+  l_blob BLOB; 
+  v_src_loc  BFILE;
+  v_amount   INTEGER;
+BEGIN
+  v_src_loc := BFILENAME('BFILE_DIR', 'image.jpg');
+  INSERT INTO lob_table  
+  VALUES (1, empty_blob()) RETURN JPG INTO l_blob; 
+  DBMS_LOB.FILEOPEN(v_src_loc, DBMS_LOB.LOB_READONLY);
+  v_amount := DBMS_LOB.GETLENGTH(v_src_loc);
+  DBMS_LOB.LOADFROMFILE(l_blob, v_src_loc, v_amount);
+  DBMS_LOB.FILECLOSE(v_src_loc);
+  COMMIT;
+END;
+-----
+--DROP TABLE bfile_table;
+CREATE TABLE bfile_table (
+ name VARCHAR(255),
+ doc BFILE 
+)
+
+INSERT INTO bfile_table VALUES ( 'doc', BFILENAME( 'BFILE_DIR', 'doc.docx' ) );
+SELECT * FROM bfile_table;

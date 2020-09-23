@@ -1,0 +1,18 @@
+9.0 Build 6197 - Database and Application Migration Software.
+Copyright (c) 1999-2019 Ispirer Systems Ltd. All Rights Reserved.
+Timestamp: Fri May 29 12:39:51 2020
+
+Importing database objects to Oracle
+Import initialization
+Importing function SWF_OBJECT_ID to Oracle
+“ª § ­ ­¥¤®¯ãáâ¨¬ë© ¯ãâì.
+Importing tables (1 table)
+
+Importing table TableMigr to Oracle
+Creating table and its constraints using the Oracle SQL*Plus utility
+“ª § ­ ­¥¤®¯ãáâ¨¬ë© ¯ãâì.
+Importing data using the Oracle SQL*Loader utility
+“ª § ­ ­¥¤®¯ãáâ¨¬ë© ¯ãâì.
+Importing functions ordered by dependency (2 functions)
+Importing function fn_diagramobjects to Oracle
+“ª § ­ ­¥¤®¯ãáâ¨¬ë© ¯ãâì.

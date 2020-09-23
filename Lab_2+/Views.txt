@@ -1,0 +1,4 @@
+SELECT TOP (100) PERCENT dbo.Tracks.TrackName, dbo.Artists.Name, dbo.Tracks.Duratuion, dbo.Tracks.Comment, dbo.Tracks.Description, dbo.Tracks.Year, dbo.Tracks.Rating
+FROM     dbo.Tracks INNER JOIN
+                  dbo.TrackAuthors ON dbo.Tracks.TrackID = dbo.TrackAuthors.TrackID INNER JOIN
+                  dbo.Artists ON dbo.TrackAuthors.ArtistID = dbo.Artists.ArtistID

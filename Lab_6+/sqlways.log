@@ -1,0 +1,97 @@
+SQLWays 9.0 Build 6197 64bit - Database and Application Migration Software.
+Copyright (c) 1999-2019 Ispirer Systems Ltd. All Rights Reserved.
+Timestamp: Fri May 29 12:39:32 2020
+
+OS: Unknown version
+OS Locale: Format - ru-RU (Russian); Location - Россия; Current language - ru-RU (Russian)
+
+Command Prompt: /D=D:\Studying\Course_3\Second_2sem\Web-Database\Labs\Lab_6\FSD1.dsn /U=swatar /P=***** /SROW=1 /TARGET=Oracle /TD=LABS /TU=LABS /TP=***** /IMPORD=Clean /IMPS=Windows /DIR=D:\Studying\Course_3\Second_2sem\Web-Database\Labs\Lab_6 /STDEL=; /INI=C:\Users\HOME\Documents\Ispirer\SQLWays 2020\sqlways_db.ini /PRJF=C:\Users\HOME\Documents\Ispirer\SQLWays 2020\sqlways.xml /NSTOP /GCMD=sqlways_all.bat /LOG=sqlways.log /RPT=reports
+Ini file path: C:\Users\HOME\Documents\Ispirer\SQLWays 2020\sqlways_db.ini
+Datasource alias: D:\Studying\Course_3\Second_2sem\Web-Database\Labs\Lab_6\FSD1.dsn
+Target database: Oracle 
+Import system: Windows
+
+This product is licensed to bgtu - Nikita - Belarus - Ispirer MnMTK 2020 Microsoft SQL Server to Oracle Database Migration Demo License (1 month, 20200629)
+
+License Name: Ispirer MnMTK 2020 Microsoft SQL Server to Oracle Database Migration Demo License
+Type of License: DEMO
+Migration of: Database
+Extension Package: Not Included
+Support: General Support Included
+
+Valid from May 29, 2020 until June 29, 2020
+
+Allowed directions:
+Microsoft SQL Server to Oracle
+
+Common restrictions:
+	Table            :	Objects count: 100	Objects total size: 2 GB	Object size: 2 GB
+	View             :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	StoredProcedure  :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	Function         :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	Trigger          :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	Package          :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	Script           :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+
+Connecting to D:\Studying\Course_3\Second_2sem\Web-Database\Labs\Lab_6\FSD1.dsn...OK (Microsoft SQL Server  11.00.2100, 78 msec )
+Database driver info: 
+	Driver name: "SQLSRV32.DLL"
+	Driver version: 10.00.18362
+	ODBC version: 03.80.0000
+Database ForMigration (Microsoft SQL Server 11.0 for Microsoft SQL Server)
+
+Reading database structure...
+Reading tables (template dbo.TableMigr)...Ok (1 table, 3719 msec)
+Reading columns info:  
+Reading columns...OK (2 columns, 0 msec )
+Reading default values...OK (0 defaults, 0 msec )
+Reading identity properties...OK (0 identities, 0 msec )
+Reading primary keys...OK (0 keys, 0 msec )
+Reading foreign keys...OK (0 keys, 0 msec )
+Reading unique constraints...OK (0 constraints, 0 msec )
+Reading check constraints...OK (0 constraints, 0 msec )
+Reading indexes...OK (0 indexes, 0 msec )
+Reading comments...OK (0 comments, 0 msec )
+Reading rule bindings...OK (0 rule bindings, 156 msec )
+Reading functions (template dbo.fn_diagramobjects)...Ok (1 function, 47 msec)
+
+Timestamp: Fri May 29 12:39:37 2020
+Executing query dbo.TableMigr...Ok (62 msec)
+
+Exporting rows... Ok (2 rows exported, 0Kb, 0 sec )
+
+Generating DDL...Ok (3 secs)
+
+Source table:     dbo.TableMigr
+Output table:     TableMigr
+Output data file: D:\Studying\Course_3\Second_2sem\Web-Database\Labs\Lab_6\tablemigr.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Fri May 29 12:39:40 2020
+
+Extracting Function(dbo.fn_diagramobjects, 1643 bytes, 1643 symbols)...Ok
+Converting Function(dbo.fn_diagramobjects)...Ok (45 lines, 50 measured, 3 sec), 50 of 500 LOC licensed, 1 of 1
+Extracting Function(SWF_OBJECT_ID, 2050 bytes)...Ok
+
+Import order "Clean" used.
+Creating general import script (sqlways_all.bat)...Ok
+
+Disconnected from D:\Studying\Course_3\Second_2sem\Web-Database\Labs\Lab_6\FSD1.dsn.
+
+Total: 1 table(s), 1 Ok, 0 Failed, 0 Warning(s), 2 row(s), 3 sec (2 sec DDL and 0 sec Data), 16 b
+
+Total: 1 function(s), 1 Ok, 0 Failed, 0 Warning(s), 45 line(s), 50 measured, 1643 byte(s), 1643 symbol(s), 3 sec
+
+
+Timestamp: Fri May 29 12:39:43 2020
+
+Elapsed time: 11 sec
+
+Total memory used: 979984 KB
+Total number of objects: 2 object(s)
+Total lines of code for objects: 45 line(s)
+Total measured lines of code for objects: 50 line(s)
+Total number of symbols for objects: 1643 symbol(s)
+Total number of bytes for objects: 2 Kb
+Total row counts: 2 row(s)

@@ -1,0 +1,10 @@
+use PotatoRhymes;
+
+go
+CREATE PROCEDURE TracksSummary AS
+BEGIN
+    SELECT * FROM Tracks;
+END;
+
+
+exec TracksSummary;
